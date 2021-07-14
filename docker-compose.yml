@@ -8,6 +8,7 @@ services:
     container_name: app
     depends_on:
       - db
+    restart: unless-stopped  
     #environment:
       #- SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/compose-postgres
       #- SPRING_DATASOURCE_USERNAME=compose-postgres
@@ -20,3 +21,5 @@ services:
     environment:
       - POSTGRES_USER=compose-postgres
       - POSTGRES_PASSWORD=compose-postgres
+    restart: unless-stopped  
+  
